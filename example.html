@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <div onclick="a3()">Click Me!</div>
+        <input type="submit" onclick="a3()">
+        <p id="welcome"></p>
+    </body>
+    <script>
+         
+        function a1(){
+            alert("abc");
+        }
+
+        function a2(){
+            var result = confirm("You are female?");
+            if(result){
+                document.getElementById("welcome").innerHTML="Hello, Madam!";
+            }else{
+                document.getElementById("welcome").innerHTML="Hello, Sir!";
+            }
+        }
+        function a3(){
+            var age;
+            var result;
+            do{
+                age = prompt("How old are you?")
+             //alert(age);
+        
+                if(age<=0){
+                    
+                }else if(age>0 && age<12){ 
+                    result="You are kid!";
+                }else if(age>=12 && age<25){
+                    result="You are younger!";
+                }else if(age>=25 && age<50){
+                    result="You are teenager!";
+                }else if(age>=50 && age<70){
+                    result="You are eldest!";
+                }else{
+                    result="You are oldest!";
+                }
+            }while(age>0);
+            document.getElementById("welcome").innerHTML=result;
+           
+        }
+       
+    </script>
+</html>
