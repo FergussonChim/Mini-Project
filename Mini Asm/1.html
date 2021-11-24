@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="icon" type="image/x-icon" href="gn.png">
+    </head>
+    <style>
+        body {
+          background-image: url('f1.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+        h2{
+            text-align: center;
+            color: black;
+        }
+        h1{
+            text-align: center;
+            color: dodgerblue;
+        }
+        .submit{
+            background-color: rgb(171, 236, 221);
+            padding: 10px 30px;
+        }
+        .reset{
+            background-color:rgb(255, 0, 0);
+            padding: 10px 30px;
+        }
+    </style>
+    
+        <body>
+            <form action="game-javascript-localstorage.html">
+                <br>
+                <h1>Create ID</h1>
+
+                <h2>Player’s Name:<input type="text" id="T1" size='40'></h2>
+                <h2 align='left'><input type="radio" checked='checked' name="sex" value="male">Male</br></h2>
+                <h2><input type="radio"  name="sex" value="female">Female</h2> 
+
+            <h4 align='center'><a href="2.html" target="_blank"><input  type='button' value="Submit" name="sex" onclick="passvalues()" class="submit"></a></h4>
+            <h4 align='center'><a href="1.html" target="_blank"><input  type="reset" value="Reset" name="sex" class="reset"></a></h4>
+        </body>
+        <script>
+            function passvalues(){
+                var firstname=document.getElementById('T1').value;
+                localStorage.setItem("textvalue",firstname);
+                return false;
+            }
+        </script>
+</html>
