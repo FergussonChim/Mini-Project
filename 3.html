@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Guess The Number</title>
+    <link rel="icon" type="image/x-icon" href="gn.png">
+    <link
+      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  </head>
+  <style>
+    body {
+      background-image: url('fj1.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    #inputValue,
+    #currentResult,
+    #resultHistory {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+    .banner {
+      color: #ffd23f;
+      font-size: 35px;
+      font-family: sans-serif;
+    }
+    .check {
+      background-color: #5AC0B1;
+      margin: 0px 5px 30px;
+      padding: 10px 67px;
+    }
+    .restart {
+      background-color: red;
+      padding: 10px 67px
+    }
+    .list-group-item {
+      background-color: blueviolet;
+    }
+  </style>
+  <body class="text-center">
+        <h1><font color="#9900ff">Guess The Number</font></h1>  
+    <main class="container">
+      <p class="banner p-3">We have selected a random number between 1 - 100. 
+        See if you can guess it</p>
+      <div class="form-group">
+        <input
+          id="inputValue"
+          min="0" max="100"
+          type="number"
+          placeholder="What's your guess?"
+        />
+      </div>
+      <div id="currentResult">
+      </div>
+      <button type="button" id="number-submit" class="check">
+        Check Guess
+      </button>
+      <button type="button" id="restart-game" class="restart">
+        Restart
+      </button>
+      <div id="resultHistory">
+      </div>
+    </main>
+    <script src="myscript.js"></script>
+  </body>
+</html>
